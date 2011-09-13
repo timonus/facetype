@@ -27,7 +27,7 @@
 
 - (void)dealloc {
 	[_font release];
-	
+	[_characterViews release];
 	[super dealloc];
 }
 
@@ -48,6 +48,7 @@
 	[_scrollView setShowsVerticalScrollIndicator:NO];
 	[_scrollView setShowsHorizontalScrollIndicator:NO];	
 	[_scrollView setPagingEnabled:YES];
+	[_scrollView setDelegate:self];
 	
 	[[self view] addSubview:_scrollView];
 	[_scrollView release];
@@ -55,6 +56,8 @@
 	[_scrollView setContentOffset:CGPointMake([_scrollView bounds].size.width * _currentPage, 0.0f)];
 	
 	// Setup Characters
+	
+	_characterViews = [[NSMutableArray alloc] init];
 	
 	for (int i = 0 ; i < [characters count] ; i++) {
 		NSString *text = [characters objectAtIndex:i];
@@ -68,7 +71,14 @@
 		[character setClipsToBounds:NO];
 		
 		[_scrollView addSubview:character];
+		[_characterViews addObject:character];
 		[character release];
+		
+		if (i == _currentPage) {
+			[character setAlpha:1.0f];
+		} else {
+			[character setAlpha:FADED_ALPHA];
+		}
 	}
 	
 	// Setup Back Button
@@ -83,6 +93,8 @@
 - (void)viewDidUnload {
 	[super viewDidUnload];
 	
+	[_characterViews release];
+	_characterViews = nil;
 	_scrollView = nil;
 }
 
@@ -105,13 +117,13 @@
 		[UIView beginAnimations:nil context:nil];
 		[UIView setAnimationBeginsFromCurrentState:YES];
 		
-//		for (NSString *key in _charactersViews) {
-//			[[_charactersViews objectForKey:key] setAlpha:FADED_ALPHA];
-//		}
-//		
-//		for (NSString *key in [TSFontViewController keysForPage:page]) {
-//			[[_charactersViews objectForKey:key] setAlpha:1.0f];
-//		}
+		for (int i = 0 ; i < [_characterViews count] ; i++) {
+			if (i == _currentPage) {
+				[[_characterViews objectAtIndex:i] setAlpha:1.0f];
+			} else {
+				[[_characterViews objectAtIndex:i] setAlpha:FADED_ALPHA];
+			}
+		}
 		
 		[UIView commitAnimations];
 	}
