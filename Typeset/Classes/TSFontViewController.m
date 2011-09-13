@@ -219,6 +219,16 @@
 	return [keys autorelease];
 }
 
++ (NSArray *)allKeys {
+	NSMutableArray *allKeys = [[NSMutableArray alloc] init];
+	
+	[allKeys addObjectsFromArray:[self keysForPage:0]];
+	[allKeys addObjectsFromArray:[self keysForPage:1]];
+	[allKeys addObjectsFromArray:[self keysForPage:2]];
+	
+	return [allKeys autorelease];
+}
+
 #pragma mark -
 #pragma mark Instance Methods
 
