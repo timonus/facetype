@@ -1,0 +1,7 @@
+*.DS_Store
+build*
+*.mode1v3
+*.pbxuser
+Typeset.xcodeproj/project.xcworkspace*
+Typeset.xcodeproj/xcuserdata/*
+Typeset.xcodeproj/project.xcworkspace/*
