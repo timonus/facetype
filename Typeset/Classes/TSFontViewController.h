@@ -23,4 +23,6 @@
 + (NSArray *)keysForPage:(int)page;
 + (NSArray *)allKeys;
 
+- (void)glyphTapped:(UIGestureRecognizer *)gestureRecognizer;
+
 @end

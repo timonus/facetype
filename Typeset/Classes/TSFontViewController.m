@@ -7,6 +7,7 @@
 //
 
 #import "TSFontViewController.h"
+#import "TSGlyphViewController.h"
 #import "TJBackButton.h"
 
 #define FADED_ALPHA 0.25f
@@ -38,6 +39,7 @@
 
 - (void)loadView {
 	[super loadView];
+	[[self view] setClipsToBounds:YES];
 	
 	// Setup Scrollview
 	
@@ -73,6 +75,8 @@
 		[character setText:text];
 		[character setBackgroundColor:[UIColor clearColor]];
 		[character setClipsToBounds:NO];
+		[character addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(glyphTapped:)] autorelease]];
+		[character setUserInteractionEnabled:YES];
 		
 		[_charactersViews setObject:character forKey:text];
 		[_scrollView addSubview:character];
@@ -93,6 +97,8 @@
 		[character setAlpha:FADED_ALPHA];
 		[character setBackgroundColor:[UIColor clearColor]];
 		[character setClipsToBounds:NO];
+		[character addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(glyphTapped:)] autorelease]];
+		[character setUserInteractionEnabled:YES];
 		
 		[_charactersViews setObject:character forKey:text];
 		[_scrollView addSubview:character];
@@ -113,6 +119,8 @@
 		[character setAlpha:FADED_ALPHA];
 		[character setBackgroundColor:[UIColor clearColor]];
 		[character setClipsToBounds:NO];
+		[character addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(glyphTapped:)] autorelease]];
+		[character setUserInteractionEnabled:YES];
 		
 		[_charactersViews setObject:character forKey:text];
 		[_scrollView addSubview:character];
@@ -122,13 +130,13 @@
 	// Setup Back Button
 	
 	TJBackButton *backButton = [[TJBackButton alloc] initWithFrame:CGRectMake(8.0f, 8.0f, 100.0f, 100.0f)];
+	[backButton addTarget:[self navigationController] action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
 	
 	[[self view] addSubview:backButton];
 	[backButton release];
 	
 	// Setup Page Control
 	
-//	_pageControl = [[TJPageControl alloc] initWithFrame:CGRectMake(0.0f, [[self view] bounds].size.height - PAGE_INSET, [[self view] bounds].size.width, PAGE_INSET)];
 	_pageControl = [[TJPageControl alloc] init];
 	[_pageControl setFrame:CGRectMake(0.0f, [[self view] bounds].size.height - PAGE_INSET, [[self view] bounds].size.width, PAGE_INSET)];
 	[_pageControl setNumberOfPages:3];
@@ -234,10 +242,15 @@
 
 - (id)initWithFont:(UIFont *)font {
 	if (self = [self init]) {
-		_font = [font retain];
+		_font = [[UIFont fontWithName:[font fontName] size:[TSFontViewController fontSize]] retain];
 	}
 	
 	return self;
+}
+
+- (void)glyphTapped:(UIGestureRecognizer *)gestureRecognizer {
+	int index = [[TSFontViewController allKeys] indexOfObject:[(UILabel *)[gestureRecognizer view] text]];
+	[[self navigationController] pushViewController:[[[TSGlyphViewController alloc] initWithFont:_font index:index] autorelease] animated:YES];
 }
 
 @end

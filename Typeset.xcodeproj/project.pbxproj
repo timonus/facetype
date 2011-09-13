@@ -21,6 +21,7 @@
 		59AC990E141F10EC00ABC950 /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC990A141F10EC00ABC950 /* backWhite.png */; };
 		59AC990F141F10EC00ABC950 /* backWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC990B141F10EC00ABC950 /* backWhite@2x.png */; };
 		59AC9911141F15BE00ABC950 /* ZegoeUI-U.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59AC9910141F15BE00ABC950 /* ZegoeUI-U.ttf */; };
+		59C668C9141FCA9500943369 /* TSGlyphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C668C8141FCA9500943369 /* TSGlyphViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		59AC990A141F10EC00ABC950 /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backWhite.png; sourceTree = "<group>"; };
 		59AC990B141F10EC00ABC950 /* backWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backWhite@2x.png"; sourceTree = "<group>"; };
 		59AC9910141F15BE00ABC950 /* ZegoeUI-U.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZegoeUI-U.ttf"; sourceTree = "<group>"; };
+		59C668C7141FCA9500943369 /* TSGlyphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSGlyphViewController.h; sourceTree = "<group>"; };
+		59C668C8141FCA9500943369 /* TSGlyphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSGlyphViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 			children = (
 				59AC98FA141EFF0B00ABC950 /* TSFontViewController.h */,
 				59AC98FB141EFF0B00ABC950 /* TSFontViewController.m */,
+				59C668C7141FCA9500943369 /* TSGlyphViewController.h */,
+				59C668C8141FCA9500943369 /* TSGlyphViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				59AC98FC141EFF0B00ABC950 /* TSFontViewController.m in Sources */,
 				59AC9903141F03E000ABC950 /* TJPageControl.m in Sources */,
 				59AC9906141F10BA00ABC950 /* TJBackButton.m in Sources */,
+				59C668C9141FCA9500943369 /* TSGlyphViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
