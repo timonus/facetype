@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "TSFontViewController.h"
 
-@interface TSGlyphViewController : UIViewController {
+@interface TSGlyphViewController : UIViewController <UIScrollViewDelegate> {
 	UIScrollView *_scrollView;
 	UIFont *_font;
+	NSMutableArray *_characterViews;
 	
 	int _currentPage;
 }
