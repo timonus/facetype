@@ -13,6 +13,14 @@
 		59AC98EE141EFEE300ABC950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59AC98EC141EFEE300ABC950 /* InfoPlist.strings */; };
 		59AC98F0141EFEE300ABC950 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC98EF141EFEE300ABC950 /* main.m */; };
 		59AC98F4141EFEE300ABC950 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC98F3141EFEE300ABC950 /* TSAppDelegate.m */; };
+		59AC98FC141EFF0B00ABC950 /* TSFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC98FB141EFF0B00ABC950 /* TSFontViewController.m */; };
+		59AC9903141F03E000ABC950 /* TJPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC9901141F03E000ABC950 /* TJPageControl.m */; };
+		59AC9906141F10BA00ABC950 /* TJBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC9905141F10BA00ABC950 /* TJBackButton.m */; };
+		59AC990C141F10EC00ABC950 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC9908141F10EC00ABC950 /* back.png */; };
+		59AC990D141F10EC00ABC950 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC9909141F10EC00ABC950 /* back@2x.png */; };
+		59AC990E141F10EC00ABC950 /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC990A141F10EC00ABC950 /* backWhite.png */; };
+		59AC990F141F10EC00ABC950 /* backWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC990B141F10EC00ABC950 /* backWhite@2x.png */; };
+		59AC9911141F15BE00ABC950 /* ZegoeUI-U.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59AC9910141F15BE00ABC950 /* ZegoeUI-U.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +28,23 @@
 		59AC98E3141EFEE300ABC950 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59AC98E5141EFEE300ABC950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59AC98E7141EFEE300ABC950 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		59AC98EB141EFEE300ABC950 /* Typeset-Info.plist */ = {isa = PBXFileReference; path = "Typeset-Info.plist"; sourceTree = "<group>"; };
+		59AC98EB141EFEE300ABC950 /* Typeset-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Typeset-Info.plist"; sourceTree = "<group>"; };
 		59AC98ED141EFEE300ABC950 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59AC98EF141EFEE300ABC950 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		59AC98F1141EFEE300ABC950 /* Typeset-Prefix.pch */ = {isa = PBXFileReference; path = "Typeset-Prefix.pch"; sourceTree = "<group>"; };
-		59AC98F2141EFEE300ABC950 /* TSAppDelegate.h */ = {isa = PBXFileReference; path = TSAppDelegate.h; sourceTree = "<group>"; };
+		59AC98F1141EFEE300ABC950 /* Typeset-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Typeset-Prefix.pch"; sourceTree = "<group>"; };
+		59AC98F2141EFEE300ABC950 /* TSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
 		59AC98F3141EFEE300ABC950 /* TSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
+		59AC98FA141EFF0B00ABC950 /* TSFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFontViewController.h; path = Classes/TSFontViewController.h; sourceTree = "<group>"; };
+		59AC98FB141EFF0B00ABC950 /* TSFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFontViewController.m; path = Classes/TSFontViewController.m; sourceTree = "<group>"; };
+		59AC9901141F03E000ABC950 /* TJPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPageControl.m; sourceTree = "<group>"; };
+		59AC9902141F03E000ABC950 /* TJPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPageControl.h; sourceTree = "<group>"; };
+		59AC9904141F10BA00ABC950 /* TJBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBackButton.h; sourceTree = "<group>"; };
+		59AC9905141F10BA00ABC950 /* TJBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBackButton.m; sourceTree = "<group>"; };
+		59AC9908141F10EC00ABC950 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		59AC9909141F10EC00ABC950 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		59AC990A141F10EC00ABC950 /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backWhite.png; sourceTree = "<group>"; };
+		59AC990B141F10EC00ABC950 /* backWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backWhite@2x.png"; sourceTree = "<group>"; };
+		59AC9910141F15BE00ABC950 /* ZegoeUI-U.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZegoeUI-U.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +91,9 @@
 		59AC98E9141EFEE300ABC950 /* Typeset */ = {
 			isa = PBXGroup;
 			children = (
-				59AC98F2141EFEE300ABC950 /* TSAppDelegate.h */,
-				59AC98F3141EFEE300ABC950 /* TSAppDelegate.m */,
+				59AC98FD141EFF0F00ABC950 /* Classes */,
+				59AC9907141F10DD00ABC950 /* Images */,
+				59AC9910141F15BE00ABC950 /* ZegoeUI-U.ttf */,
 				59AC98EA141EFEE300ABC950 /* Supporting Files */,
 			);
 			path = Typeset;
@@ -88,6 +108,56 @@
 				59AC98F1141EFEE300ABC950 /* Typeset-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59AC98FD141EFF0F00ABC950 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				59AC98FE141EFF1700ABC950 /* Application */,
+				59AC98FF141EFF2000ABC950 /* View Controllers */,
+				59AC9900141F03C300ABC950 /* Controls */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		59AC98FE141EFF1700ABC950 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				59AC98F2141EFEE300ABC950 /* TSAppDelegate.h */,
+				59AC98F3141EFEE300ABC950 /* TSAppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		59AC98FF141EFF2000ABC950 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59AC98FA141EFF0B00ABC950 /* TSFontViewController.h */,
+				59AC98FB141EFF0B00ABC950 /* TSFontViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		59AC9900141F03C300ABC950 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				59AC9902141F03E000ABC950 /* TJPageControl.h */,
+				59AC9901141F03E000ABC950 /* TJPageControl.m */,
+				59AC9904141F10BA00ABC950 /* TJBackButton.h */,
+				59AC9905141F10BA00ABC950 /* TJBackButton.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		59AC9907141F10DD00ABC950 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				59AC9908141F10EC00ABC950 /* back.png */,
+				59AC9909141F10EC00ABC950 /* back@2x.png */,
+				59AC990A141F10EC00ABC950 /* backWhite.png */,
+				59AC990B141F10EC00ABC950 /* backWhite@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +211,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				59AC98EE141EFEE300ABC950 /* InfoPlist.strings in Resources */,
+				59AC990C141F10EC00ABC950 /* back.png in Resources */,
+				59AC990D141F10EC00ABC950 /* back@2x.png in Resources */,
+				59AC990E141F10EC00ABC950 /* backWhite.png in Resources */,
+				59AC990F141F10EC00ABC950 /* backWhite@2x.png in Resources */,
+				59AC9911141F15BE00ABC950 /* ZegoeUI-U.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +228,9 @@
 			files = (
 				59AC98F0141EFEE300ABC950 /* main.m in Sources */,
 				59AC98F4141EFEE300ABC950 /* TSAppDelegate.m in Sources */,
+				59AC98FC141EFF0B00ABC950 /* TSFontViewController.m in Sources */,
+				59AC9903141F03E000ABC950 /* TJPageControl.m in Sources */,
+				59AC9906141F10BA00ABC950 /* TJBackButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +300,7 @@
 				GCC_PREFIX_HEADER = "Typeset/Typeset-Prefix.pch";
 				INFOPLIST_FILE = "Typeset/Typeset-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -233,6 +312,7 @@
 				GCC_PREFIX_HEADER = "Typeset/Typeset-Prefix.pch";
 				INFOPLIST_FILE = "Typeset/Typeset-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -256,6 +336,7 @@
 				59AC98F9141EFEE300ABC950 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
