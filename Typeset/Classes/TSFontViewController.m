@@ -20,7 +20,7 @@
 
 - (id)init {
 	if (self = [super init]) {
-		_font = [UIFont systemFontOfSize:[TSFontViewController fontSize]];
+		_font = [[UIFont systemFontOfSize:[TSFontViewController fontSize]] retain];
 	}
 	
 	return self;
