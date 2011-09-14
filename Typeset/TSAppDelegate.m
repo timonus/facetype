@@ -7,7 +7,7 @@
 //
 
 #import "TSAppDelegate.h"
-#import "TSFontViewController.h"
+#import "TempFontsViewController.h"
 
 @implementation TSAppDelegate
 
@@ -31,7 +31,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 	
-	TSFontViewController *viewController = [[TSFontViewController alloc] initWithFont:[UIFont fontWithName:@"Georgia" size:[TSFontViewController fontSize]]];
+	TempFontsViewController *viewController = [[TempFontsViewController alloc] init];
 	_navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
 	[_navigationController setNavigationBarHidden:YES];
 	[viewController release];
