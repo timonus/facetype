@@ -23,6 +23,8 @@
 				[_datasource addObject:fontName];
 			}
 		}
+		
+		[_datasource sortUsingSelector:@selector(caseInsensitiveCompare:)];
     }
     return self;
 }
