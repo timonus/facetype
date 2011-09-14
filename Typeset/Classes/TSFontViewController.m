@@ -234,6 +234,18 @@
 			[keys addObject:@"\""];
 			[keys addObject:@":"];
 			[keys addObject:@";"];
+			[keys addObject:@"&"];
+			[keys addObject:@"@"];
+			[keys addObject:@"#"];
+			[keys addObject:@"$"];
+			[keys addObject:@"%"];
+			[keys addObject:@"*"];
+			
+			[keys addObject:@"()"];
+			[keys addObject:@"{}"];
+			[keys addObject:@"[]"];
+			[keys addObject:@"<>"];
+			
 			break;
 	}
 	
