@@ -57,10 +57,13 @@
 - (void)setTint:(TJBackButtonTint)tint {
 	[self setTitle:@"  Back" forState:UIControlStateNormal];
 	[[self titleLabel] setFont:[UIFont boldSystemFontOfSize:15.0f]];
-	[self setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted | UIControlStateSelected];
+	[self setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+	[self setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
+	[self setAdjustsImageWhenHighlighted:YES];
 	
 	if (tint == TJBackButtonTintWhite) {
 		[self setBackgroundImage:[UIImage imageNamed:@"backWhite"] forState:UIControlStateNormal];
+		
 		[self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 	} else {
 		[self setBackgroundImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
