@@ -69,15 +69,17 @@
 	for (int i = 0 ; i < [characters count] ; i++) {
 		NSString *text = [characters objectAtIndex:i];
 		
-		UILabel *character = [[UILabel alloc] initWithFrame:CGRectMake(size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
-		[character setTextAlignment:UITextAlignmentCenter];
-		[character setAdjustsFontSizeToFitWidth:YES];
-		[character setFont:_font];
-		[character setText:text];
+		UIButton *character = [[UIButton alloc] initWithFrame:CGRectMake(size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
+		[[character titleLabel] setAdjustsFontSizeToFitWidth:YES];
+		[[character titleLabel] setFont:_font];
+		[character setTitle:text forState:UIControlStateNormal];
 		[character setBackgroundColor:[UIColor clearColor]];
 		[character setClipsToBounds:NO];
-		[character addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(glyphTapped:)] autorelease]];
+		[character setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		[character setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+		[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
 		[character setUserInteractionEnabled:YES];
+		[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
 		
 		CGPoint center = [character center];
 		[character sizeToFit];
@@ -94,16 +96,17 @@
 	for (int i = 0 ; i < [characters count] ; i++) {
 		NSString *text = [characters objectAtIndex:i];
 		
-		UILabel *character = [[UILabel alloc] initWithFrame:CGRectMake([_scrollView bounds].size.width + size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
-		[character setTextAlignment:UITextAlignmentCenter];
-		[character setAdjustsFontSizeToFitWidth:YES];
-		[character setFont:_font];
-		[character setText:text];
-		[character setAlpha:FADED_ALPHA];
+		UIButton *character = [[UIButton alloc] initWithFrame:CGRectMake([_scrollView bounds].size.width + size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
+		[[character titleLabel] setAdjustsFontSizeToFitWidth:YES];
+		[[character titleLabel] setFont:_font];
+		[character setTitle:text forState:UIControlStateNormal];
 		[character setBackgroundColor:[UIColor clearColor]];
 		[character setClipsToBounds:NO];
-		[character addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(glyphTapped:)] autorelease]];
+		[character setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		[character setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+		[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
 		[character setUserInteractionEnabled:YES];
+		[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
 		
 		CGPoint center = [character center];
 		[character sizeToFit];
@@ -120,16 +123,17 @@
 	for (int i = 0 ; i < [characters count] ; i++) {
 		NSString *text = [characters objectAtIndex:i];
 		
-		UILabel *character = [[UILabel alloc] initWithFrame:CGRectMake(2.0f * [_scrollView bounds].size.width + size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
-		[character setTextAlignment:UITextAlignmentCenter];
-		[character setAdjustsFontSizeToFitWidth:YES];
-		[character setFont:_font];
-		[character setText:text];
-		[character setAlpha:FADED_ALPHA];
+		UIButton *character = [[UIButton alloc] initWithFrame:CGRectMake(2.0f * [_scrollView bounds].size.width + size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
+		[[character titleLabel] setAdjustsFontSizeToFitWidth:YES];
+		[[character titleLabel] setFont:_font];
+		[character setTitle:text forState:UIControlStateNormal];
 		[character setBackgroundColor:[UIColor clearColor]];
 		[character setClipsToBounds:NO];
-		[character addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(glyphTapped:)] autorelease]];
+		[character setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		[character setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+		[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
 		[character setUserInteractionEnabled:YES];
+		[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
 		
 		CGPoint center = [character center];
 		[character sizeToFit];
@@ -273,8 +277,8 @@
 	return self;
 }
 
-- (void)glyphTapped:(UIGestureRecognizer *)gestureRecognizer {
-	int index = [[TSFontViewController allKeys] indexOfObject:[(UILabel *)[gestureRecognizer view] text]];
+- (void)glyphTapped:(id)sender {
+	int index = [[TSFontViewController allKeys] indexOfObject:[[(UIButton *)sender titleLabel] text]];
 	[[self navigationController] pushViewController:[[[TSGlyphViewController alloc] initWithFont:_font index:index] autorelease] animated:YES];
 }
 
