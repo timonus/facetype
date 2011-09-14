@@ -7,6 +7,7 @@
 //
 
 #import "TSGlyphViewController.h"
+#import "UINavigationController+PopAnimated.h"
 #import "TJBackButton.h"
 
 #define FADED_ALPHA 0.25f
@@ -84,7 +85,7 @@
 	// Setup Back Button
 	
 	TJBackButton *backButton = [[TJBackButton alloc] initWithFrame:CGRectMake(8.0f, 8.0f, 100.0f, 100.0f)];
-	[backButton addTarget:[self navigationController] action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
+	[backButton addTarget:[self navigationController] action:@selector(popViewControllerAnimated) forControlEvents:UIControlEventTouchUpInside];
 	
 	[[self view] addSubview:backButton];
 	[backButton release];
