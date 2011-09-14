@@ -138,7 +138,7 @@
 #pragma mark Class Methods
 
 + (CGFloat)fontSize {
-	return 650.0f;
+	return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? 650.0f : 200.0f;
 }
 
 #pragma mark -
