@@ -79,6 +79,10 @@
 		[character addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(glyphTapped:)] autorelease]];
 		[character setUserInteractionEnabled:YES];
 		
+		CGPoint center = [character center];
+		[character sizeToFit];
+		[character setCenter:center];
+		
 		[_charactersViews setObject:character forKey:text];
 		[_scrollView addSubview:character];
 		[character release];
@@ -101,6 +105,10 @@
 		[character addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(glyphTapped:)] autorelease]];
 		[character setUserInteractionEnabled:YES];
 		
+		CGPoint center = [character center];
+		[character sizeToFit];
+		[character setCenter:center];
+		
 		[_charactersViews setObject:character forKey:text];
 		[_scrollView addSubview:character];
 		[character release];
@@ -122,6 +130,10 @@
 		[character setClipsToBounds:NO];
 		[character addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(glyphTapped:)] autorelease]];
 		[character setUserInteractionEnabled:YES];
+		
+		CGPoint center = [character center];
+		[character sizeToFit];
+		[character setCenter:center];
 		
 		[_charactersViews setObject:character forKey:text];
 		[_scrollView addSubview:character];
