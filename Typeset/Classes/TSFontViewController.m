@@ -61,77 +61,33 @@
 		_charactersViews = [[NSMutableDictionary alloc] init];
 	}
 	
-	// Page 1
-	
 	CGSize size = CGSizeMake(([_scrollView bounds].size.width / CELLS_PER_ROW), ([_scrollView bounds].size.height / ceil(26.0f / CELLS_PER_ROW)));
 	
-	NSArray *characters = [TSFontViewController keysForPage:0];
-	for (int i = 0 ; i < [characters count] ; i++) {
-		NSString *text = [characters objectAtIndex:i];
-		
-		UIButton *character = [[UIButton alloc] initWithFrame:CGRectMake(size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
-		[[character titleLabel] setAdjustsFontSizeToFitWidth:YES];
-		[[character titleLabel] setFont:_font];
-		[character setTitle:text forState:UIControlStateNormal];
-		[character setBackgroundColor:[UIColor clearColor]];
-		[character setClipsToBounds:NO];
-		[character setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-		[character setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-		[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
-		[character setUserInteractionEnabled:YES];
-		[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
-		
-		[_charactersViews setObject:character forKey:text];
-		[_scrollView addSubview:character];
-		[character release];
-	}
-	
-	// Page 2
-	
-	characters = [TSFontViewController keysForPage:1];
-	for (int i = 0 ; i < [characters count] ; i++) {
-		NSString *text = [characters objectAtIndex:i];
-		
-		UIButton *character = [[UIButton alloc] initWithFrame:CGRectMake([_scrollView bounds].size.width + size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
-		[[character titleLabel] setAdjustsFontSizeToFitWidth:YES];
-		[[character titleLabel] setFont:_font];
-		[character setTitle:text forState:UIControlStateNormal];
-		[character setBackgroundColor:[UIColor clearColor]];
-		[character setClipsToBounds:NO];
-		[character setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-		[character setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-		[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
-		[character setUserInteractionEnabled:YES];
-		[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
-		[character setAlpha:FADED_ALPHA];
-		
-		[_charactersViews setObject:character forKey:text];
-		[_scrollView addSubview:character];
-		[character release];
-	}
-	
-	// Page 3
-	
-	characters = [TSFontViewController keysForPage:2];
-	for (int i = 0 ; i < [characters count] ; i++) {
-		NSString *text = [characters objectAtIndex:i];
-		
-		UIButton *character = [[UIButton alloc] initWithFrame:CGRectMake(2.0f * [_scrollView bounds].size.width + size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
-		[[character titleLabel] setAdjustsFontSizeToFitWidth:YES];
-		[[character titleLabel] setFont:_font];
-		[character setTitle:text forState:UIControlStateNormal];
-		[character setBackgroundColor:[UIColor clearColor]];
-		[character setClipsToBounds:NO];
-		[character setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-		[character setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-		[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
-		[character setUserInteractionEnabled:YES];
-		[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
-		[character setAlpha:FADED_ALPHA];
-		
-		[_charactersViews setObject:character forKey:text];
-		[_scrollView addSubview:character];
-		[character release];
+	for (int page = 0 ; page < 3 ; page++) {
+		NSArray *characters = [TSFontViewController keysForPage:page];
+		for (int i = 0 ; i < [characters count] ; i++) {
+			NSString *text = [characters objectAtIndex:i];
+			
+			UIButton *character = [[UIButton alloc] initWithFrame:CGRectMake([_scrollView bounds].size.width * page + size.width * (i % CELLS_PER_ROW), size.height * (i / CELLS_PER_ROW), size.width, size.height)];
+			[[character titleLabel] setAdjustsFontSizeToFitWidth:YES];
+			[[character titleLabel] setFont:_font];
+			[character setTitle:text forState:UIControlStateNormal];
+			[character setBackgroundColor:[UIColor clearColor]];
+			[character setClipsToBounds:NO];
+			[character setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+			[character setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+			[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
+			[character setUserInteractionEnabled:YES];
+			[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
+			
+			if (page != 0) {
+				[character setAlpha:FADED_ALPHA];
+			}
+			
+			[_charactersViews setObject:character forKey:text];
+			[_scrollView addSubview:character];
+			[character release];
+		}
 	}
 	
 	// Setup Back Button
