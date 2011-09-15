@@ -107,6 +107,7 @@
 		[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
 		[character setUserInteractionEnabled:YES];
 		[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
+		[character setAlpha:FADED_ALPHA];
 		
 		CGPoint center = [character center];
 		[character sizeToFit];
@@ -134,6 +135,7 @@
 		[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
 		[character setUserInteractionEnabled:YES];
 		[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
+		[character setAlpha:FADED_ALPHA];
 		
 		CGPoint center = [character center];
 		[character sizeToFit];
