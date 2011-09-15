@@ -45,6 +45,7 @@
 	// Setup Scrollview
 	
 	_scrollView = [[UIScrollView alloc] initWithFrame:CGRectInset([[self view] bounds], PAGE_INSET, PAGE_INSET)];
+	[_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 	[_scrollView setContentSize:CGSizeMake([_scrollView bounds].size.width * 3.0f, [_scrollView bounds].size.height)];
 	[_scrollView setClipsToBounds:NO];
 	[_scrollView setShowsVerticalScrollIndicator:NO];
@@ -79,6 +80,7 @@
 			[character setTitleColor:[UIColor grayColor] forState:UIControlStateSelected];
 			[character setUserInteractionEnabled:YES];
 			[character addTarget:self action:@selector(glyphTapped:) forControlEvents:UIControlEventTouchUpInside];
+			[character setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin];
 			
 			if (page != 0) {
 				[character setAlpha:FADED_ALPHA];
@@ -105,12 +107,18 @@
 	[_pageControl setNumberOfPages:3];
 	[_pageControl setCurrentPage:0];
 	[_pageControl setBackgroundColor:[UIColor clearColor]];
+	[_pageControl setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 	
 	[_pageControl setBaseColor:[UIColor blackColor]];
 	[_pageControl setSelectedColor:[UIColor blackColor]];
 	
 	[[self view] addSubview:_pageControl];
 	[_pageControl release];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	[_scrollView setContentSize:CGSizeMake([_scrollView bounds].size.width * 3.0f, [_scrollView bounds].size.height)];
 }
 
 - (void)viewDidUnload {
@@ -124,6 +132,15 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
 	return toInterfaceOrientation == UIInterfaceOrientationPortrait || toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown;
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+	_currentPage = ([_scrollView contentOffset].x + [_scrollView bounds].size.width / 2.0f) / [_scrollView bounds].size.width;
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+	[_scrollView setContentSize:CGSizeMake(_scrollView.bounds.size.width * 3.0f, _scrollView.bounds.size.height)];
+	[_scrollView setContentOffset:CGPointMake(_currentPage * _scrollView.bounds.size.width, 0.0f)];
 }
 
 #pragma mark -

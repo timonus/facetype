@@ -15,6 +15,8 @@
 	TJPageControl *_pageControl;
 	
 	UIFont *_font;
+	
+	int _currentPage;
 }
 
 - (id)initWithFont:(UIFont *)font;
