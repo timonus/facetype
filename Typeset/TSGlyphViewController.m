@@ -71,10 +71,6 @@
 		[character setBackgroundColor:[UIColor clearColor]];
 		[character setClipsToBounds:NO];
 		
-		CGPoint center = [character center];
-		[character sizeToFit];
-		[character setCenter:center];
-		
 		[_scrollView addSubview:character];
 		[_characterViews addObject:character];
 		[character release];
