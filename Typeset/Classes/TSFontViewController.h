@@ -20,6 +20,7 @@
 }
 
 - (id)initWithFont:(UIFont *)font;
+- (id)initWithFontName:(NSString *)font;
 
 + (NSArray *)keysForPage:(int)page;
 + (NSArray *)allKeys;

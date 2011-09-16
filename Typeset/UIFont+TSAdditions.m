@@ -10,8 +10,12 @@
 
 @implementation UIFont (TSAdditions)
 
-+ (CGFloat)fontSize {
++ (CGFloat)faceTypeFontSize {
 	return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? 100.0f : 36.0f;
+}
+
++ (CGFloat)faceTypeGlyphSize {
+	return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? 650.0f : 200.0f;
 }
 
 @end

@@ -17,7 +17,6 @@
 	int _currentPage;
 }
 
-+ (CGFloat)fontSize;
 - (id)initWithFont:(UIFont *)font index:(int)initialIndex;
 
 @end

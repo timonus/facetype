@@ -10,6 +10,7 @@
 
 @interface UIFont (TSAdditions)
 
-+ (CGFloat)fontSize;
++ (CGFloat)faceTypeFontSize;
++ (CGFloat)faceTypeGlyphSize;
 
 @end

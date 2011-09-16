@@ -23,7 +23,7 @@
 
 - (id)init {
 	if (self = [super init]) {
-		_font = [[UIFont systemFontOfSize:[UIFont fontSize]] retain];
+		_font = [[UIFont systemFontOfSize:[UIFont faceTypeFontSize]] retain];
 	}
 	
 	return self;
@@ -230,8 +230,15 @@
 #pragma mark Instance Methods
 
 - (id)initWithFont:(UIFont *)font {
+	if (self = [self initWithFontName:[font fontName]]) {
+	}
+	
+	return self;
+}
+
+- (id)initWithFontName:(NSString *)fontName {
 	if (self = [self init]) {
-		_font = [[UIFont fontWithName:[font fontName] size:[UIFont fontSize]] retain];
+		_font = [[UIFont fontWithName:fontName size:[UIFont faceTypeFontSize]] retain];
 	}
 	
 	return self;

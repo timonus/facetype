@@ -8,6 +8,7 @@
 
 #import "TSGlyphViewController.h"
 #import "UINavigationController+PopAnimated.h"
+#import "UIFont+TSAdditions.h"
 #import "TJBackButton.h"
 
 #define FADED_ALPHA 0.25f
@@ -20,7 +21,7 @@
 
 - (id)init {
 	if (self = [super init]) {
-		_font = [[UIFont systemFontOfSize:[TSGlyphViewController fontSize]] retain];
+		_font = [[UIFont systemFontOfSize:[UIFont faceTypeFontSize]] retain];
 	}
 	
 	return self;
@@ -148,18 +149,11 @@
 }
 
 #pragma mark -
-#pragma mark Class Methods
-
-+ (CGFloat)fontSize {
-	return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? 650.0f : 200.0f;
-}
-
-#pragma mark -
 #pragma mark Instance Methods
 
 - (id)initWithFont:(UIFont *)font {
 	if (self = [self init]) {
-		_font = [[UIFont fontWithName:[font fontName] size:[TSGlyphViewController fontSize]] retain];
+		_font = [[UIFont fontWithName:[font fontName] size:[UIFont faceTypeFontSize]] retain];
 		_currentPage = 0;
 	}
 	

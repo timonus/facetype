@@ -74,7 +74,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	[[self navigationController] pushViewController:[[[TSFontViewController alloc] initWithFont:[UIFont fontWithName:[_datasource objectAtIndex:indexPath.row] size:20.0f]]autorelease] animated:YES];
+	[[self navigationController] pushViewController:[[[TSFontViewController alloc] initWithFontName:[_datasource objectAtIndex:indexPath.row]] autorelease] animated:YES];
 }
 
 @end
