@@ -18,11 +18,10 @@
 		59AC98FC141EFF0B00ABC950 /* TSFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC98FB141EFF0B00ABC950 /* TSFontViewController.m */; };
 		59AC9903141F03E000ABC950 /* TJPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC9901141F03E000ABC950 /* TJPageControl.m */; };
 		59AC9906141F10BA00ABC950 /* TJBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC9905141F10BA00ABC950 /* TJBackButton.m */; };
-		59AC990C141F10EC00ABC950 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC9908141F10EC00ABC950 /* back.png */; };
-		59AC990D141F10EC00ABC950 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC9909141F10EC00ABC950 /* back@2x.png */; };
-		59AC990E141F10EC00ABC950 /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC990A141F10EC00ABC950 /* backWhite.png */; };
-		59AC990F141F10EC00ABC950 /* backWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59AC990B141F10EC00ABC950 /* backWhite@2x.png */; };
-		59AC9911141F15BE00ABC950 /* ZegoeUI-U.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59AC9910141F15BE00ABC950 /* ZegoeUI-U.ttf */; };
+		59BA3A6614240D680001C9BA /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6214240D680001C9BA /* back.png */; };
+		59BA3A6714240D680001C9BA /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6314240D680001C9BA /* back@2x.png */; };
+		59BA3A6814240D680001C9BA /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6414240D680001C9BA /* backWhite.png */; };
+		59BA3A6914240D680001C9BA /* backWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6514240D680001C9BA /* backWhite@2x.png */; };
 		59C668C9141FCA9500943369 /* TSGlyphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C668C8141FCA9500943369 /* TSGlyphViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +46,10 @@
 		59AC9902141F03E000ABC950 /* TJPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPageControl.h; sourceTree = "<group>"; };
 		59AC9904141F10BA00ABC950 /* TJBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBackButton.h; sourceTree = "<group>"; };
 		59AC9905141F10BA00ABC950 /* TJBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBackButton.m; sourceTree = "<group>"; };
-		59AC9908141F10EC00ABC950 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		59AC9909141F10EC00ABC950 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
-		59AC990A141F10EC00ABC950 /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backWhite.png; sourceTree = "<group>"; };
-		59AC990B141F10EC00ABC950 /* backWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backWhite@2x.png"; sourceTree = "<group>"; };
-		59AC9910141F15BE00ABC950 /* ZegoeUI-U.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZegoeUI-U.ttf"; sourceTree = "<group>"; };
+		59BA3A6214240D680001C9BA /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Images/back.png; sourceTree = "<group>"; };
+		59BA3A6314240D680001C9BA /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "Images/back@2x.png"; sourceTree = "<group>"; };
+		59BA3A6414240D680001C9BA /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backWhite.png; path = Images/backWhite.png; sourceTree = "<group>"; };
+		59BA3A6514240D680001C9BA /* backWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backWhite@2x.png"; path = "Images/backWhite@2x.png"; sourceTree = "<group>"; };
 		59C668C7141FCA9500943369 /* TSGlyphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSGlyphViewController.h; sourceTree = "<group>"; };
 		59C668C8141FCA9500943369 /* TSGlyphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSGlyphViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +109,6 @@
 			children = (
 				59AC98FD141EFF0F00ABC950 /* Classes */,
 				59AC9907141F10DD00ABC950 /* Images */,
-				59AC9910141F15BE00ABC950 /* ZegoeUI-U.ttf */,
 				59AC98EA141EFEE300ABC950 /* Supporting Files */,
 			);
 			path = Typeset;
@@ -175,10 +172,10 @@
 		59AC9907141F10DD00ABC950 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				59AC9908141F10EC00ABC950 /* back.png */,
-				59AC9909141F10EC00ABC950 /* back@2x.png */,
-				59AC990A141F10EC00ABC950 /* backWhite.png */,
-				59AC990B141F10EC00ABC950 /* backWhite@2x.png */,
+				59BA3A6214240D680001C9BA /* back.png */,
+				59BA3A6314240D680001C9BA /* back@2x.png */,
+				59BA3A6414240D680001C9BA /* backWhite.png */,
+				59BA3A6514240D680001C9BA /* backWhite@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -234,11 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				59AC98EE141EFEE300ABC950 /* InfoPlist.strings in Resources */,
-				59AC990C141F10EC00ABC950 /* back.png in Resources */,
-				59AC990D141F10EC00ABC950 /* back@2x.png in Resources */,
-				59AC990E141F10EC00ABC950 /* backWhite.png in Resources */,
-				59AC990F141F10EC00ABC950 /* backWhite@2x.png in Resources */,
-				59AC9911141F15BE00ABC950 /* ZegoeUI-U.ttf in Resources */,
+				59BA3A6614240D680001C9BA /* back.png in Resources */,
+				59BA3A6714240D680001C9BA /* back@2x.png in Resources */,
+				59BA3A6814240D680001C9BA /* backWhite.png in Resources */,
+				59BA3A6914240D680001C9BA /* backWhite@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
