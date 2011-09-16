@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		594C99AC142415E60004E77A /* UIFont+TSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99AB142415E50004E77A /* UIFont+TSAdditions.m */; };
 		595E1D1B14203BC100B49EE5 /* UINavigationController+PopAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 595E1D1A14203BC100B49EE5 /* UINavigationController+PopAnimated.m */; };
 		595E1D2214203CAF00B49EE5 /* TempFontsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 595E1D2114203CAF00B49EE5 /* TempFontsViewController.m */; };
 		59AC98E4141EFEE300ABC950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AC98E3141EFEE300ABC950 /* UIKit.framework */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		594C99AA142415E50004E77A /* UIFont+TSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+TSAdditions.h"; sourceTree = "<group>"; };
+		594C99AB142415E50004E77A /* UIFont+TSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+TSAdditions.m"; sourceTree = "<group>"; };
 		595E1D1914203BC100B49EE5 /* UINavigationController+PopAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PopAnimated.h"; sourceTree = "<group>"; };
 		595E1D1A14203BC100B49EE5 /* UINavigationController+PopAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+PopAnimated.m"; sourceTree = "<group>"; };
 		595E1D2014203CAF00B49EE5 /* TempFontsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempFontsViewController.h; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 			children = (
 				595E1D1914203BC100B49EE5 /* UINavigationController+PopAnimated.h */,
 				595E1D1A14203BC100B49EE5 /* UINavigationController+PopAnimated.m */,
+				594C99AA142415E50004E77A /* UIFont+TSAdditions.h */,
+				594C99AB142415E50004E77A /* UIFont+TSAdditions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				59C668C9141FCA9500943369 /* TSGlyphViewController.m in Sources */,
 				595E1D1B14203BC100B49EE5 /* UINavigationController+PopAnimated.m in Sources */,
 				595E1D2214203CAF00B49EE5 /* TempFontsViewController.m in Sources */,
+				594C99AC142415E60004E77A /* UIFont+TSAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

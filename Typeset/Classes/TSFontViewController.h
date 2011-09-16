@@ -21,7 +21,6 @@
 
 - (id)initWithFont:(UIFont *)font;
 
-+ (CGFloat)fontSize;
 + (NSArray *)keysForPage:(int)page;
 + (NSArray *)allKeys;
 

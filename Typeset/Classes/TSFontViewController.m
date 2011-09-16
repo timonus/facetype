@@ -10,6 +10,7 @@
 #import "TSGlyphViewController.h"
 #import "UINavigationController+PopAnimated.h"
 #import "TJBackButton.h"
+#import "UIFont+TSAdditions.h"
 
 #define FADED_ALPHA 0.25f
 #define PAGE_INSET ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? 80.0f : 46.0f)
@@ -22,7 +23,7 @@
 
 - (id)init {
 	if (self = [super init]) {
-		_font = [[UIFont systemFontOfSize:[TSFontViewController fontSize]] retain];
+		_font = [[UIFont systemFontOfSize:[UIFont fontSize]] retain];
 	}
 	
 	return self;
@@ -170,10 +171,6 @@
 #pragma mark -
 #pragma mark Class Methods
 
-+ (CGFloat)fontSize {
-	return [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? 100.0f : 36.0f;
-}
-
 + (NSArray *)keysForPage:(int)page {
 	
 	NSMutableArray *keys = [[NSMutableArray alloc] init];
@@ -234,7 +231,7 @@
 
 - (id)initWithFont:(UIFont *)font {
 	if (self = [self init]) {
-		_font = [[UIFont fontWithName:[font fontName] size:[TSFontViewController fontSize]] retain];
+		_font = [[UIFont fontWithName:[font fontName] size:[UIFont fontSize]] retain];
 	}
 	
 	return self;
