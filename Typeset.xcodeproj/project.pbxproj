@@ -7,32 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		594C99AC142415E60004E77A /* UIFont+TSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99AB142415E50004E77A /* UIFont+TSAdditions.m */; };
-		595E1D1B14203BC100B49EE5 /* UINavigationController+PopAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 595E1D1A14203BC100B49EE5 /* UINavigationController+PopAnimated.m */; };
-		595E1D2214203CAF00B49EE5 /* TempFontsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 595E1D2114203CAF00B49EE5 /* TempFontsViewController.m */; };
+		594C99B0142418890004E77A /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99AF142418890004E77A /* TSAppDelegate.m */; };
+		594C99B3142418920004E77A /* TempFontsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99B2142418920004E77A /* TempFontsViewController.m */; };
+		594C99B6142418A60004E77A /* TSGlyphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99B5142418A60004E77A /* TSGlyphViewController.m */; };
+		594C99BB142418B70004E77A /* TJBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99B8142418B70004E77A /* TJBackButton.m */; };
+		594C99BC142418B70004E77A /* TJPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99BA142418B70004E77A /* TJPageControl.m */; };
+		594C99C1142418C20004E77A /* UIFont+TSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99BE142418C20004E77A /* UIFont+TSAdditions.m */; };
+		594C99C2142418C20004E77A /* UINavigationController+PopAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99C0142418C20004E77A /* UINavigationController+PopAnimated.m */; };
 		59AC98E4141EFEE300ABC950 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AC98E3141EFEE300ABC950 /* UIKit.framework */; };
 		59AC98E6141EFEE300ABC950 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AC98E5141EFEE300ABC950 /* Foundation.framework */; };
 		59AC98E8141EFEE300ABC950 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AC98E7141EFEE300ABC950 /* CoreGraphics.framework */; };
 		59AC98EE141EFEE300ABC950 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59AC98EC141EFEE300ABC950 /* InfoPlist.strings */; };
 		59AC98F0141EFEE300ABC950 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC98EF141EFEE300ABC950 /* main.m */; };
-		59AC98F4141EFEE300ABC950 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC98F3141EFEE300ABC950 /* TSAppDelegate.m */; };
 		59AC98FC141EFF0B00ABC950 /* TSFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC98FB141EFF0B00ABC950 /* TSFontViewController.m */; };
-		59AC9903141F03E000ABC950 /* TJPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC9901141F03E000ABC950 /* TJPageControl.m */; };
-		59AC9906141F10BA00ABC950 /* TJBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC9905141F10BA00ABC950 /* TJBackButton.m */; };
 		59BA3A6614240D680001C9BA /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6214240D680001C9BA /* back.png */; };
 		59BA3A6714240D680001C9BA /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6314240D680001C9BA /* back@2x.png */; };
 		59BA3A6814240D680001C9BA /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6414240D680001C9BA /* backWhite.png */; };
 		59BA3A6914240D680001C9BA /* backWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6514240D680001C9BA /* backWhite@2x.png */; };
-		59C668C9141FCA9500943369 /* TSGlyphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59C668C8141FCA9500943369 /* TSGlyphViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		594C99AA142415E50004E77A /* UIFont+TSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+TSAdditions.h"; sourceTree = "<group>"; };
-		594C99AB142415E50004E77A /* UIFont+TSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+TSAdditions.m"; sourceTree = "<group>"; };
-		595E1D1914203BC100B49EE5 /* UINavigationController+PopAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PopAnimated.h"; sourceTree = "<group>"; };
-		595E1D1A14203BC100B49EE5 /* UINavigationController+PopAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+PopAnimated.m"; sourceTree = "<group>"; };
-		595E1D2014203CAF00B49EE5 /* TempFontsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempFontsViewController.h; sourceTree = "<group>"; };
-		595E1D2114203CAF00B49EE5 /* TempFontsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempFontsViewController.m; sourceTree = "<group>"; };
+		594C99AE142418890004E77A /* TSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSAppDelegate.h; path = Classes/TSAppDelegate.h; sourceTree = "<group>"; };
+		594C99AF142418890004E77A /* TSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSAppDelegate.m; path = Classes/TSAppDelegate.m; sourceTree = "<group>"; };
+		594C99B1142418920004E77A /* TempFontsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempFontsViewController.h; path = Classes/TempFontsViewController.h; sourceTree = "<group>"; };
+		594C99B2142418920004E77A /* TempFontsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TempFontsViewController.m; path = Classes/TempFontsViewController.m; sourceTree = "<group>"; };
+		594C99B4142418A60004E77A /* TSGlyphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSGlyphViewController.h; path = Classes/TSGlyphViewController.h; sourceTree = "<group>"; };
+		594C99B5142418A60004E77A /* TSGlyphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSGlyphViewController.m; path = Classes/TSGlyphViewController.m; sourceTree = "<group>"; };
+		594C99B7142418B70004E77A /* TJBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJBackButton.h; path = Classes/TJBackButton.h; sourceTree = "<group>"; };
+		594C99B8142418B70004E77A /* TJBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJBackButton.m; path = Classes/TJBackButton.m; sourceTree = "<group>"; };
+		594C99B9142418B70004E77A /* TJPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TJPageControl.h; path = Classes/TJPageControl.h; sourceTree = "<group>"; };
+		594C99BA142418B70004E77A /* TJPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJPageControl.m; path = Classes/TJPageControl.m; sourceTree = "<group>"; };
+		594C99BD142418C20004E77A /* UIFont+TSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+TSAdditions.h"; path = "Classes/UIFont+TSAdditions.h"; sourceTree = "<group>"; };
+		594C99BE142418C20004E77A /* UIFont+TSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+TSAdditions.m"; path = "Classes/UIFont+TSAdditions.m"; sourceTree = "<group>"; };
+		594C99BF142418C20004E77A /* UINavigationController+PopAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+PopAnimated.h"; path = "Classes/UINavigationController+PopAnimated.h"; sourceTree = "<group>"; };
+		594C99C0142418C20004E77A /* UINavigationController+PopAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+PopAnimated.m"; path = "Classes/UINavigationController+PopAnimated.m"; sourceTree = "<group>"; };
 		59AC98DF141EFEE300ABC950 /* Typeset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Typeset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AC98E3141EFEE300ABC950 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59AC98E5141EFEE300ABC950 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -41,20 +49,12 @@
 		59AC98ED141EFEE300ABC950 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59AC98EF141EFEE300ABC950 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59AC98F1141EFEE300ABC950 /* Typeset-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Typeset-Prefix.pch"; sourceTree = "<group>"; };
-		59AC98F2141EFEE300ABC950 /* TSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
-		59AC98F3141EFEE300ABC950 /* TSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
 		59AC98FA141EFF0B00ABC950 /* TSFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSFontViewController.h; path = Classes/TSFontViewController.h; sourceTree = "<group>"; };
 		59AC98FB141EFF0B00ABC950 /* TSFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSFontViewController.m; path = Classes/TSFontViewController.m; sourceTree = "<group>"; };
-		59AC9901141F03E000ABC950 /* TJPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJPageControl.m; sourceTree = "<group>"; };
-		59AC9902141F03E000ABC950 /* TJPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJPageControl.h; sourceTree = "<group>"; };
-		59AC9904141F10BA00ABC950 /* TJBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJBackButton.h; sourceTree = "<group>"; };
-		59AC9905141F10BA00ABC950 /* TJBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJBackButton.m; sourceTree = "<group>"; };
 		59BA3A6214240D680001C9BA /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Images/back.png; sourceTree = "<group>"; };
 		59BA3A6314240D680001C9BA /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "Images/back@2x.png"; sourceTree = "<group>"; };
 		59BA3A6414240D680001C9BA /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backWhite.png; path = Images/backWhite.png; sourceTree = "<group>"; };
 		59BA3A6514240D680001C9BA /* backWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backWhite@2x.png"; path = "Images/backWhite@2x.png"; sourceTree = "<group>"; };
-		59C668C7141FCA9500943369 /* TSGlyphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSGlyphViewController.h; sourceTree = "<group>"; };
-		59C668C8141FCA9500943369 /* TSGlyphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSGlyphViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +74,10 @@
 		595E1D1414203B8500B49EE5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				595E1D1914203BC100B49EE5 /* UINavigationController+PopAnimated.h */,
-				595E1D1A14203BC100B49EE5 /* UINavigationController+PopAnimated.m */,
-				594C99AA142415E50004E77A /* UIFont+TSAdditions.h */,
-				594C99AB142415E50004E77A /* UIFont+TSAdditions.m */,
+				594C99BD142418C20004E77A /* UIFont+TSAdditions.h */,
+				594C99BE142418C20004E77A /* UIFont+TSAdditions.m */,
+				594C99BF142418C20004E77A /* UINavigationController+PopAnimated.h */,
+				594C99C0142418C20004E77A /* UINavigationController+PopAnimated.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -144,8 +144,8 @@
 		59AC98FE141EFF1700ABC950 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				59AC98F2141EFEE300ABC950 /* TSAppDelegate.h */,
-				59AC98F3141EFEE300ABC950 /* TSAppDelegate.m */,
+				594C99AE142418890004E77A /* TSAppDelegate.h */,
+				594C99AF142418890004E77A /* TSAppDelegate.m */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -153,12 +153,12 @@
 		59AC98FF141EFF2000ABC950 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				595E1D2014203CAF00B49EE5 /* TempFontsViewController.h */,
-				595E1D2114203CAF00B49EE5 /* TempFontsViewController.m */,
+				594C99B1142418920004E77A /* TempFontsViewController.h */,
+				594C99B2142418920004E77A /* TempFontsViewController.m */,
 				59AC98FA141EFF0B00ABC950 /* TSFontViewController.h */,
 				59AC98FB141EFF0B00ABC950 /* TSFontViewController.m */,
-				59C668C7141FCA9500943369 /* TSGlyphViewController.h */,
-				59C668C8141FCA9500943369 /* TSGlyphViewController.m */,
+				594C99B4142418A60004E77A /* TSGlyphViewController.h */,
+				594C99B5142418A60004E77A /* TSGlyphViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -166,10 +166,10 @@
 		59AC9900141F03C300ABC950 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				59AC9902141F03E000ABC950 /* TJPageControl.h */,
-				59AC9901141F03E000ABC950 /* TJPageControl.m */,
-				59AC9904141F10BA00ABC950 /* TJBackButton.h */,
-				59AC9905141F10BA00ABC950 /* TJBackButton.m */,
+				594C99B7142418B70004E77A /* TJBackButton.h */,
+				594C99B8142418B70004E77A /* TJBackButton.m */,
+				594C99B9142418B70004E77A /* TJPageControl.h */,
+				594C99BA142418B70004E77A /* TJPageControl.m */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -251,14 +251,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				59AC98F0141EFEE300ABC950 /* main.m in Sources */,
-				59AC98F4141EFEE300ABC950 /* TSAppDelegate.m in Sources */,
 				59AC98FC141EFF0B00ABC950 /* TSFontViewController.m in Sources */,
-				59AC9903141F03E000ABC950 /* TJPageControl.m in Sources */,
-				59AC9906141F10BA00ABC950 /* TJBackButton.m in Sources */,
-				59C668C9141FCA9500943369 /* TSGlyphViewController.m in Sources */,
-				595E1D1B14203BC100B49EE5 /* UINavigationController+PopAnimated.m in Sources */,
-				595E1D2214203CAF00B49EE5 /* TempFontsViewController.m in Sources */,
-				594C99AC142415E60004E77A /* UIFont+TSAdditions.m in Sources */,
+				594C99B0142418890004E77A /* TSAppDelegate.m in Sources */,
+				594C99B3142418920004E77A /* TempFontsViewController.m in Sources */,
+				594C99B6142418A60004E77A /* TSGlyphViewController.m in Sources */,
+				594C99BB142418B70004E77A /* TJBackButton.m in Sources */,
+				594C99BC142418B70004E77A /* TJPageControl.m in Sources */,
+				594C99C1142418C20004E77A /* UIFont+TSAdditions.m in Sources */,
+				594C99C2142418C20004E77A /* UINavigationController+PopAnimated.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
