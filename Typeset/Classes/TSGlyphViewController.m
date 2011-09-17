@@ -102,6 +102,17 @@
 	
 	[[self view] addSubview:backButton];
 	[backButton release];
+	
+	// Setup Title Label
+	
+	UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [[self view] bounds].size.width - 16.0f, 46.0f)];
+	[titleLabel setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+	[titleLabel setTextAlignment:UITextAlignmentRight];
+	[titleLabel setFont:[UIFont boldSystemFontOfSize:15.0f]];
+	[titleLabel setText:[_font fontName]];
+	
+	[[self view] insertSubview:titleLabel belowSubview:backButton];
+	[titleLabel release];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
