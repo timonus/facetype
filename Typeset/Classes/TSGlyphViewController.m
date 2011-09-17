@@ -9,6 +9,7 @@
 #import "TSGlyphViewController.h"
 #import "UINavigationController+PopAnimated.h"
 #import "UIFont+TSAdditions.h"
+#import "TJScrollViewExtenderView.h"
 #import "TJBackButton.h"
 
 #define FADED_ALPHA 0.25f
@@ -57,6 +58,15 @@
 	[_scrollView release];
 	
 	[_scrollView setContentOffset:CGPointMake([_scrollView bounds].size.width * _currentPage, 0.0f)];
+	
+	// Setup Scrollview Helper
+	
+	TJScrollViewExtenderView *extenderView = [[TJScrollViewExtenderView alloc] initWithFrame:CGRectInset([[self view] bounds], 0.0f, PAGE_INSET)];
+	[_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+	extenderView.scrollView = _scrollView;
+	
+	[[self view] insertSubview:extenderView belowSubview:_scrollView];
+	[extenderView release];
 	
 	// Setup Characters
 	

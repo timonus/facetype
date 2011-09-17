@@ -24,6 +24,7 @@
 		59BA3A6714240D680001C9BA /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6314240D680001C9BA /* back@2x.png */; };
 		59BA3A6814240D680001C9BA /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6414240D680001C9BA /* backWhite.png */; };
 		59BA3A6914240D680001C9BA /* backWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59BA3A6514240D680001C9BA /* backWhite@2x.png */; };
+		59CEA98F1425241300D47E85 /* TJScrollViewExtenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59CEA98E1425241300D47E85 /* TJScrollViewExtenderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		59BA3A6314240D680001C9BA /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "Images/back@2x.png"; sourceTree = "<group>"; };
 		59BA3A6414240D680001C9BA /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backWhite.png; path = Images/backWhite.png; sourceTree = "<group>"; };
 		59BA3A6514240D680001C9BA /* backWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backWhite@2x.png"; path = "Images/backWhite@2x.png"; sourceTree = "<group>"; };
+		59CEA98D1425241300D47E85 /* TJScrollViewExtenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = TJScrollViewExtenderView.h; path = Classes/TJScrollViewExtenderView.h; sourceTree = "<group>"; };
+		59CEA98E1425241300D47E85 /* TJScrollViewExtenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TJScrollViewExtenderView.m; path = Classes/TJScrollViewExtenderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 			children = (
 				59AC98FE141EFF1700ABC950 /* Application */,
 				59AC98FF141EFF2000ABC950 /* View Controllers */,
+				59CEA988142523E000D47E85 /* Views */,
 				59AC9900141F03C300ABC950 /* Controls */,
 				595E1D1414203B8500B49EE5 /* Categories */,
 			);
@@ -183,6 +187,15 @@
 				59BA3A6514240D680001C9BA /* backWhite@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		59CEA988142523E000D47E85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59CEA98D1425241300D47E85 /* TJScrollViewExtenderView.h */,
+				59CEA98E1425241300D47E85 /* TJScrollViewExtenderView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +272,7 @@
 				594C99BC142418B70004E77A /* TJPageControl.m in Sources */,
 				594C99C1142418C20004E77A /* UIFont+TSAdditions.m in Sources */,
 				594C99C2142418C20004E77A /* UINavigationController+PopAnimated.m in Sources */,
+				59CEA98F1425241300D47E85 /* TJScrollViewExtenderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
