@@ -21,7 +21,7 @@
 
 - (id)init {
 	if (self = [super init]) {
-		_font = [[UIFont systemFontOfSize:[UIFont faceTypeFontSize]] retain];
+		_font = [[UIFont systemFontOfSize:[UIFont faceTypeGlyphSize]] retain];
 	}
 	
 	return self;
@@ -153,7 +153,7 @@
 
 - (id)initWithFont:(UIFont *)font {
 	if (self = [self init]) {
-		_font = [[UIFont fontWithName:[font fontName] size:[UIFont faceTypeFontSize]] retain];
+		_font = [[UIFont fontWithName:[font fontName] size:[UIFont faceTypeGlyphSize]] retain];
 		_currentPage = 0;
 	}
 	
