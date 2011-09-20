@@ -21,7 +21,7 @@
 #pragma mark NSObject
 
 - (id)init {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		_font = [[UIFont systemFontOfSize:[UIFont faceTypeGlyphSize]] retain];
 	}
 	
@@ -173,7 +173,7 @@
 #pragma mark Instance Methods
 
 - (id)initWithFont:(UIFont *)font {
-	if (self = [self init]) {
+	if ((self = [self init])) {
 		_font = [[UIFont fontWithName:[font fontName] size:[UIFont faceTypeGlyphSize]] retain];
 		_currentPage = 0;
 	}
@@ -182,7 +182,7 @@
 }
 
 - (id)initWithFont:(UIFont *)font index:(int)initialIndex {
-	if (self = [self initWithFont:font]) {
+	if ((self = [self initWithFont:font])) {
 		_currentPage = initialIndex;
 	}
 	

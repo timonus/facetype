@@ -23,7 +23,7 @@
 @synthesize alignment;
 
 -(id)init{
-	if(self = [super init]){
+	if((self = [super init])){
 		[self setBackgroundColor:[UIColor clearColor]];
 		currentPage = 0;
 		numberOfPages = 0;

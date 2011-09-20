@@ -11,7 +11,7 @@
 @implementation TJBackButton
 
 - (id)init {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		[self setTint:TJBackButtonTintBlack];
 	}
 	
@@ -23,7 +23,7 @@
 
 - (id)initWithFrame:(CGRect)frame {
 	CGSize size = [[UIImage imageNamed:@"back"] size];
-	if (self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, size.width, size.height)]) {
+	if ((self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, size.width, size.height)])) {
 		[self setTint:TJBackButtonTintBlack];
 	}
 	
@@ -44,7 +44,7 @@
 #pragma mark Custom Initializer
 
 - (id)initWithTint:(TJBackButtonTint)tint {
-	if (self = [super init]) {
+	if ((self = [super init])) {
 		[self setTint:tint];
 	}
 	
