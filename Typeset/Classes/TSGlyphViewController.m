@@ -145,9 +145,6 @@
 #pragma mark -
 #pragma mark UIScrollViewDelegate
 
-#pragma mark -
-#pragma mark UIScrollViewDelegate
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 	int page = (scrollView.contentOffset.x + [scrollView bounds].size.width / 2.0f) / [scrollView bounds].size.width;
 	
@@ -172,18 +169,17 @@
 #pragma mark -
 #pragma mark Instance Methods
 
-- (id)initWithFont:(UIFont *)font {
-	if ((self = [self init])) {
-		_font = [[UIFont fontWithName:[font fontName] size:[UIFont faceTypeGlyphSize]] retain];
-		_currentPage = 0;
-	}
-	
-	return self;
+- (id)initWithFontName:(NSString *)fontName initialIndex:(int)initialIndex {
+    if ((self = [self init])) {
+        _font = [[UIFont fontWithName:fontName size:[UIFont faceTypeGlyphSize]] retain];
+        _currentPage = initialIndex;
+    }
+    
+    return self;
 }
 
 - (id)initWithFont:(UIFont *)font index:(int)initialIndex {
-	if ((self = [self initWithFont:font])) {
-		_currentPage = initialIndex;
+	if ((self = [self initWithFontName:[font fontName] initialIndex:initialIndex])) {
 	}
 	
 	return self;
