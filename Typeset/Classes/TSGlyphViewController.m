@@ -183,7 +183,7 @@ int min(int x, int y) {
 }
 
 - (void)layoutGlpyhAtIndex:(int)index {
-	if (![_characterViews objectForKey:[NSNumber numberWithInt:index]] && index > 0 && index < [[TSFontViewController allKeys] count]) {
+	if (![_characterViews objectForKey:[NSNumber numberWithInt:index]] && index >= 0 && index < [[TSFontViewController allKeys] count]) {
 		NSString *text = [[TSFontViewController allKeys] objectAtIndex:index];
 		
 		UILabel *character = [[UILabel alloc] initWithFrame:CGRectMake([_scrollView bounds].size.width * index, 0.0f, [_scrollView bounds].size.width, [_scrollView bounds].size.height)];
