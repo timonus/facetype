@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5913024E1429AE9800EF1319 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5913024D1429AE9800EF1319 /* Icon-72.png */; };
 		594C99B0142418890004E77A /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99AF142418890004E77A /* TSAppDelegate.m */; };
 		594C99B3142418920004E77A /* TempFontsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99B2142418920004E77A /* TempFontsViewController.m */; };
 		594C99B6142418A60004E77A /* TSGlyphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99B5142418A60004E77A /* TSGlyphViewController.m */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5913024D1429AE9800EF1319 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		594C99AE142418890004E77A /* TSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TSAppDelegate.h; path = Classes/TSAppDelegate.h; sourceTree = "<group>"; };
 		594C99AF142418890004E77A /* TSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TSAppDelegate.m; path = Classes/TSAppDelegate.m; sourceTree = "<group>"; };
 		594C99B1142418920004E77A /* TempFontsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TempFontsViewController.h; path = Classes/TempFontsViewController.h; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				59BA3A6314240D680001C9BA /* back@2x.png */,
 				59BA3A6414240D680001C9BA /* backWhite.png */,
 				59BA3A6514240D680001C9BA /* backWhite@2x.png */,
+				5913024D1429AE9800EF1319 /* Icon-72.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				59BA3A6714240D680001C9BA /* back@2x.png in Resources */,
 				59BA3A6814240D680001C9BA /* backWhite.png in Resources */,
 				59BA3A6914240D680001C9BA /* backWhite@2x.png in Resources */,
+				5913024E1429AE9800EF1319 /* Icon-72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
