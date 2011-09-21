@@ -70,7 +70,7 @@
 	
 	// Setup Characters
 	
-	_characterViews = [[NSMutableArray alloc] init];
+	_characterViews = [[NSMutableDictionary alloc] init];
 	
 	for (int i = 0 ; i < [characters count] ; i++) {
 		NSString *text = [characters objectAtIndex:i];
@@ -85,7 +85,7 @@
 		[character setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin];
 		
 		[_scrollView addSubview:character];
-		[_characterViews addObject:character];
+		[_characterViews setObject:character forKey:[NSNumber numberWithInt:i]];
 		[character release];
 		
 		if (i == _currentPage) {
@@ -156,9 +156,9 @@
 		
 		for (int i = 0 ; i < [_characterViews count] ; i++) {
 			if (i == _currentPage) {
-				[[_characterViews objectAtIndex:i] setAlpha:1.0f];
+				[[_characterViews objectForKey:[NSNumber numberWithInt:i]] setAlpha:1.0f];
 			} else {
-				[[_characterViews objectAtIndex:i] setAlpha:FADED_ALPHA];
+				[[_characterViews objectForKey:[NSNumber numberWithInt:i]] setAlpha:FADED_ALPHA];
 			}
 		}
 		

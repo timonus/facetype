@@ -12,7 +12,7 @@
 @interface TSGlyphViewController : UIViewController <UIScrollViewDelegate> {
 	UIScrollView *_scrollView;
 	UIFont *_font;
-	NSMutableArray *_characterViews;
+	NSMutableDictionary *_characterViews;
 	
 	int _currentPage;
 }
