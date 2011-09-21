@@ -20,4 +20,6 @@
 - (id)initWithFontName:(NSString *)fontName initialIndex:(int)initialIndex;
 - (id)initWithFont:(UIFont *)font index:(int)initialIndex;
 
+- (void)layoutGlpyhAtIndex:(int)index;
+
 @end

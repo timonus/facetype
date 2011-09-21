@@ -12,6 +12,17 @@
 #import "TJScrollViewExtenderView.h"
 #import "TJBackButton.h"
 
+inline int max(int x, int y);
+inline int min(int x, int y);
+
+int max(int x, int y) {
+	return x > y ? x : y;
+}
+
+int min(int x, int y) {
+	return x < y ? x : y;
+}
+
 #define FADED_ALPHA 0.25f
 #define PAGE_INSET ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad ? 80.0f : 46.0f)
 
@@ -72,27 +83,8 @@
 	
 	_characterViews = [[NSMutableDictionary alloc] init];
 	
-	for (int i = 0 ; i < [characters count] ; i++) {
-		NSString *text = [characters objectAtIndex:i];
-		
-		UILabel *character = [[UILabel alloc] initWithFrame:CGRectMake([_scrollView bounds].size.width * i, 0.0f, [_scrollView bounds].size.width, [_scrollView bounds].size.height)];
-		[character setTextAlignment:UITextAlignmentCenter];
-		[character setAdjustsFontSizeToFitWidth:YES];
-		[character setFont:_font];
-		[character setText:text];
-		[character setBackgroundColor:[UIColor clearColor]];
-		[character setClipsToBounds:NO];
-		[character setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin];
-		
-		[_scrollView addSubview:character];
-		[_characterViews setObject:character forKey:[NSNumber numberWithInt:i]];
-		[character release];
-		
-		if (i == _currentPage) {
-			[character setAlpha:1.0f];
-		} else {
-			[character setAlpha:FADED_ALPHA];
-		}
+	for (int i = max(_currentPage - 5, 0) ; min(i < _currentPage + 5, [characters count]) ; i++) {
+		[self layoutGlpyhAtIndex:i];
 	}
 	
 	// Setup Back Button
@@ -149,16 +141,21 @@
 	int page = (scrollView.contentOffset.x + [scrollView bounds].size.width / 2.0f) / [scrollView bounds].size.width;
 	
 	if (page != _currentPage) {
+		
 		_currentPage = page;
+		
+		for (int i = max(_currentPage - 5, 0) ; i < min(_currentPage + 5, [[TSFontViewController allKeys] count]) ; i++) {
+			[self layoutGlpyhAtIndex:i];
+		}
 		
 		[UIView beginAnimations:nil context:nil];
 		[UIView setAnimationBeginsFromCurrentState:YES];
 		
-		for (int i = 0 ; i < [_characterViews count] ; i++) {
-			if (i == _currentPage) {
-				[[_characterViews objectForKey:[NSNumber numberWithInt:i]] setAlpha:1.0f];
+		for (NSNumber *key in _characterViews) {
+			if ([key intValue] == _currentPage) {
+				[[_characterViews objectForKey:key] setAlpha:1.0f];
 			} else {
-				[[_characterViews objectForKey:[NSNumber numberWithInt:i]] setAlpha:FADED_ALPHA];
+				[[_characterViews objectForKey:key] setAlpha:FADED_ALPHA];
 			}
 		}
 		
@@ -183,6 +180,31 @@
 	}
 	
 	return self;
+}
+
+- (void)layoutGlpyhAtIndex:(int)index {
+	if (![_characterViews objectForKey:[NSNumber numberWithInt:index]] && index > 0 && index < [[TSFontViewController allKeys] count]) {
+		NSString *text = [[TSFontViewController allKeys] objectAtIndex:index];
+		
+		UILabel *character = [[UILabel alloc] initWithFrame:CGRectMake([_scrollView bounds].size.width * index, 0.0f, [_scrollView bounds].size.width, [_scrollView bounds].size.height)];
+		[character setTextAlignment:UITextAlignmentCenter];
+		[character setAdjustsFontSizeToFitWidth:YES];
+		[character setFont:_font];
+		[character setText:text];
+		[character setBackgroundColor:[UIColor clearColor]];
+		[character setClipsToBounds:NO];
+		[character setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin];
+		
+		[_scrollView addSubview:character];
+		[_characterViews setObject:character forKey:[NSNumber numberWithInt:index]];
+		[character release];
+		
+		if (index == _currentPage) {
+			[character setAlpha:1.0f];
+		} else {
+			[character setAlpha:FADED_ALPHA];
+		}
+	}
 }
 
 @end
