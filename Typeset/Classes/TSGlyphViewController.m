@@ -97,7 +97,7 @@ int min(int x, int y) {
 	
 	// Setup Title Label
 	
-	UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [[self view] bounds].size.width - 16.0f, 46.0f)];
+	UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(80.0f, 0.0f, [[self view] bounds].size.width - 88.0f, 46.0f)];
 	[titleLabel setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 	[titleLabel setTextAlignment:UITextAlignmentRight];
 	[titleLabel setFont:[UIFont boldSystemFontOfSize:15.0f]];
