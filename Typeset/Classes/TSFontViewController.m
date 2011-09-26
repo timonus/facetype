@@ -132,7 +132,7 @@
 	[titleLabel setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
 	[titleLabel setTextAlignment:UITextAlignmentRight];
 	[titleLabel setFont:[UIFont boldSystemFontOfSize:15.0f]];
-	[titleLabel setText:[_font fontName]];t
+	[titleLabel setText:[_font fontName]];
 	
 	[[self view] insertSubview:titleLabel belowSubview:backButton];
 	[titleLabel release];
