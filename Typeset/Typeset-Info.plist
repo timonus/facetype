@@ -51,12 +51,24 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>ZegoeUI-U.ttf</string>
-	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ASHBEBI_.ttf</string>
+		<string>ASHBW___.ttf</string>
+		<string>IQFONT-bold-otf</string>
+		<string>COOLVETI.TTF</string>
+		<string>Lifestyle-Rounded-M54.ttf</string>
+		<string>Nilland-Bold.ttf</string>
+		<string>Providence.ttf</string>
+		<string>STEINBI_.ttf</string>
+		<string>Sling.ttf</string>
+		<string>stripjoint.ttf</string>
+		<string>WALRUSGU.TTF</string>
+		<string>zil.ttf</string>
+		<string>ZegoeUI-U.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
