@@ -15,6 +15,10 @@
 		594C99BC142418B70004E77A /* TJPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99BA142418B70004E77A /* TJPageControl.m */; };
 		594C99C1142418C20004E77A /* UIFont+TSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99BE142418C20004E77A /* UIFont+TSAdditions.m */; };
 		594C99C2142418C20004E77A /* UINavigationController+PopAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C99C0142418C20004E77A /* UINavigationController+PopAnimated.m */; };
+		5971556E1454E596008837DF /* AdelleBasic_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5971556A1454E596008837DF /* AdelleBasic_Bold.otf */; };
+		5971556F1454E596008837DF /* AdelleBasic_BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5971556B1454E596008837DF /* AdelleBasic_BoldItalic.otf */; };
+		597155701454E596008837DF /* Logobloqo2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5971556C1454E596008837DF /* Logobloqo2.ttf */; };
+		597155711454E596008837DF /* LifestyleM54.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5971556D1454E596008837DF /* LifestyleM54.ttf */; };
 		59720417144EA3B800E7C6D7 /* ZegoeUI-U.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59720416144EA3B800E7C6D7 /* ZegoeUI-U.ttf */; };
 		59720426144EA6ED00E7C6D7 /* ASHBEBI_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59720419144EA6ED00E7C6D7 /* ASHBEBI_.ttf */; };
 		59720427144EA6ED00E7C6D7 /* ASHBW___.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5972041A144EA6ED00E7C6D7 /* ASHBW___.ttf */; };
@@ -57,6 +61,10 @@
 		594C99BE142418C20004E77A /* UIFont+TSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+TSAdditions.m"; path = "Classes/UIFont+TSAdditions.m"; sourceTree = "<group>"; };
 		594C99BF142418C20004E77A /* UINavigationController+PopAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+PopAnimated.h"; path = "Classes/UINavigationController+PopAnimated.h"; sourceTree = "<group>"; };
 		594C99C0142418C20004E77A /* UINavigationController+PopAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+PopAnimated.m"; path = "Classes/UINavigationController+PopAnimated.m"; sourceTree = "<group>"; };
+		5971556A1454E596008837DF /* AdelleBasic_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AdelleBasic_Bold.otf; sourceTree = "<group>"; };
+		5971556B1454E596008837DF /* AdelleBasic_BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AdelleBasic_BoldItalic.otf; sourceTree = "<group>"; };
+		5971556C1454E596008837DF /* Logobloqo2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Logobloqo2.ttf; sourceTree = "<group>"; };
+		5971556D1454E596008837DF /* LifestyleM54.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LifestyleM54.ttf; sourceTree = "<group>"; };
 		59720416144EA3B800E7C6D7 /* ZegoeUI-U.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZegoeUI-U.ttf"; sourceTree = "<group>"; };
 		59720419144EA6ED00E7C6D7 /* ASHBEBI_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ASHBEBI_.ttf; sourceTree = "<group>"; };
 		5972041A144EA6ED00E7C6D7 /* ASHBW___.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ASHBW___.ttf"; sourceTree = "<group>"; };
@@ -129,6 +137,10 @@
 				59720424144EA6ED00E7C6D7 /* WALRUSGU.TTF */,
 				59720425144EA6ED00E7C6D7 /* zil.ttf */,
 				59720416144EA3B800E7C6D7 /* ZegoeUI-U.ttf */,
+				5971556A1454E596008837DF /* AdelleBasic_Bold.otf */,
+				5971556B1454E596008837DF /* AdelleBasic_BoldItalic.otf */,
+				5971556C1454E596008837DF /* Logobloqo2.ttf */,
+				5971556D1454E596008837DF /* LifestyleM54.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -317,6 +329,10 @@
 				59720430144EA6ED00E7C6D7 /* stripjoint.ttf in Resources */,
 				59720431144EA6ED00E7C6D7 /* WALRUSGU.TTF in Resources */,
 				59720432144EA6ED00E7C6D7 /* zil.ttf in Resources */,
+				5971556E1454E596008837DF /* AdelleBasic_Bold.otf in Resources */,
+				5971556F1454E596008837DF /* AdelleBasic_BoldItalic.otf in Resources */,
+				597155701454E596008837DF /* Logobloqo2.ttf in Resources */,
+				597155711454E596008837DF /* LifestyleM54.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
