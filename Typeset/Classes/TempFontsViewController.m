@@ -70,10 +70,40 @@
 	return [str sizeWithFont:[UIFont fontWithName:str size:44.0f]].height + 20.0f;
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+	static NSArray *titles = nil;
+	
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		NSMutableSet *tempSet = [[NSMutableSet alloc] init];
+		
+		for (NSString *fontName in _datasource) {
+			[tempSet addObject:[[[fontName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] substringToIndex:1] uppercaseString]];
+		}
+		
+		titles = [tempSet sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:nil ascending:YES selector:@selector(caseInsensitiveCompare:)]]];
+		[tempSet release];
+	});
+	
+	return titles;
+}
+
+- (int)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+	for (int i = 0 ; i < [_datasource count] ; i++) {
+		if ([[[_datasource objectAtIndex:i] uppercaseString] hasPrefix:title]) {
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];				
+			});
+			break;
+		}
+	}
+	
+	return 0;
+}
+
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[[self navigationController] pushViewController:[[[TSFontViewController alloc] initWithFontName:[_datasource objectAtIndex:indexPath.row]] autorelease] animated:YES];
 }
 
